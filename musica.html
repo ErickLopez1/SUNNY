@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Próximamente</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 3em;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    aside {
+      width: 200px;
+      padding-right: 20px;
+    }
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+    aside li {
+      margin: 10px 0;
+    }
+    aside a {
+      text-decoration: none;
+      color: #cc0066;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+    <aside>
+        <ul>
+      
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="poemas.html">POEMAS</a></li>
+          <li><a href="fotos.html">FOTOS</a></li>
+          <li><a href="formulario.html">COMENTARIOS</a></li>
+        </ul>
+      </aside>
+  <div class="container">
+    <h1>Se agregará más contenido después</h1>
+    <div class="heart">❤️</div>
+  </div>
+</body>
+</html>
