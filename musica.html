@@ -2,43 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximamente</title>
+  <title>Musica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      text-align: center;
-    }
-
-    .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      background: linear-gradient(to right, #ffe6e6, #fff0f5);
+      color: #4b2e2e;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      color: #b30059;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+    h2{
+        text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 2px solid #ffcce0;
+      border-radius: 20px;
+      padding: 25px;
+      width: 220px;
+      box-shadow: 0 6px 12px rgba(255, 192, 203, 0.4);
+      text-align: center;
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .box p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #d147a3;
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    audio {
+      width: 100%;
     }
 
     .heart {
-      font-size: 3em;
-      animation: pulse 1.2s infinite;
+      position: absolute;
+      font-size: 24px;
+      color: #ff3366;
+      animation: floatUp 1s ease-out forwards;
+      pointer-events: none;
+      z-index: 1000;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.5);
+      }
     }
     aside {
       width: 200px;
@@ -56,22 +98,124 @@
       color: #cc0066;
       font-weight: bold;
     }
-
   </style>
 </head>
 <body>
-    <aside>
-        <ul>
-      
-          <li><a href="index.html">INICIO</a></li>
-          <li><a href="poemas.html">POEMAS</a></li>
-          <li><a href="fotos.html">FOTOS</a></li>
-          <li><a href="formulario.html">POR SI QUIERES DECIR ALGO</a></li>
-        </ul>
-      </aside>
+  <h1>Cada cancion que me hace pensar en ti</h1>
+  <h2>(toca para reproducir)</h2>
+  <aside>
+    <ul>
+  
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="poemas.html">MUSICA</a></li>
+      <li><a href="fotos.html">FOTOS</a></li>
+      <li><a href="formulario.html">COMENTARIOS</a></li>
+    </ul>
+  </aside>
   <div class="container">
-    <h1>Se agregará más contenido después</h1>
-    <div class="heart">❤️</div>
+    <div class="box">
+      <p>Por Siempre</p>
+      <img src="imagenes/happy together.jpg" alt="Foto 1" onclick="togglePlay(this)">
+      <audio>
+        <source src="musica/happy together.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+    </div>
+
+    <div class="box">
+      <p>Cien años pienso en ti</p>
+      <img src="imagenes/cien años.jpg" alt="Foto 2" onclick="togglePlay(this)">
+      <audio>
+        <source src="musica/cien años.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+    </div>
+
+    <div class="box">
+      <p>Una mañana</p>
+      <img src="imagenes/una mañana.jpg" alt="Foto 3" onclick="togglePlay(this)">
+      <audio>
+        <source src="musica/una mañana.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+    </div>
+
+    <div class="box">
+        <p>El amar y querer</p>
+        <img src="imagenes/el amar y querer.jpg" alt="Foto 2" onclick="togglePlay(this)">
+        <audio>
+          <source src="musica/el amar y querer.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
+
+      <div class="box">
+        <p>En tu planeta me quede</p>
+        <img src="imagenes/zoe.jpg" alt="Foto 2" onclick="togglePlay(this)">
+        <audio>
+          <source src="musica/zoe.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
+
+      <div class="box">
+        <p>Solo quedate un momento</p>
+        <img src="imagenes/chachacha.jpg" alt="Foto 2" onclick="togglePlay(this)">
+        <audio>
+          <source src="musica/chachacha.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
+
+      <div class="box">
+        <p>Alguien como tu</p>
+        <img src="imagenes/alguien como tu.jpg" alt="Foto 2" onclick="togglePlay(this)">
+        <audio>
+          <source src="musica/alguien como tu.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
+
+      <div class="box">
+        <p>No hay nadie como tu</p>
+        <img src="imagenes/Arrullo De Estrellas.jpg" alt="Foto 2" onclick="togglePlay(this)">
+        <audio>
+          <source src="musica/Arrullo De Estrellas.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
   </div>
+
+  <script>
+    const audios = document.querySelectorAll('audio');
+
+    function togglePlay(img) {
+      const currentAudio = img.nextElementSibling;
+
+      audios.forEach(audio => {
+        if (audio !== currentAudio) {
+          audio.pause();
+          audio.currentTime = 0; 
+        }
+      });
+
+      if (currentAudio.paused) {
+        currentAudio.play();
+      } else {
+        currentAudio.pause();
+      }
+
+      const rect = img.getBoundingClientRect();
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '❤️';
+      heart.style.left = rect.left + rect.width / 2 + 'px';
+      heart.style.top = rect.top + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    }
+  </script>
+   <h2>AGREGARÉ MÁS CADA QUE ME ACUERDE DE TI</h2>
 </body>
 </html>
+
