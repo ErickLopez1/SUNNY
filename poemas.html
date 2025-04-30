@@ -5,37 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pensando en ti</title>
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background: #ffe6e6;
-      color: #4d4d4d;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-    }
-    aside {
-      width: 200px;
-      padding-right: 20px;
-    }
-    aside ul {
-      list-style: none;
-      padding: 0;
-    }
-    aside li {
-      margin: 10px 0;
-    }
-    aside a {
-      text-decoration: none;
-      color: #cc0066;
-      font-weight: bold;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  background: linear-gradient(to right, #ffe6e6, #fff0f5);
+  color: #4b2e2e;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #b30059;
+  font-size: 48px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+aside {
+  width: 100%;
+  background-color: #ffe6f0;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+aside li {
+  margin: 0;
+}
+
+aside a {
+  text-decoration: none;
+  color: #cc0066;
+  font-weight: bold;
+  font-size: 16px;
+}
+
     main {
       flex-grow: 1;
-    }
-    h1 {
-      text-align: center;
-      color: #cc0066;
-      margin-bottom: 40px;
     }
     .grid {
       display: grid;
@@ -84,6 +102,11 @@
       font-size: 1.5em;
       margin-top: 50px;
     }
+    h2{
+      text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #b30059;
+    }
   </style>
 </head>
 <body>
@@ -94,6 +117,7 @@
       <li><a href="index.html">INICIO</a></li>
       <li><a href="musica.html">MUSICA</a></li>
       <li><a href="fotos.html">FOTOS</a></li>
+      <li><a href="cien_pensamientos.html">CIEN RAZONES</a></li>
       <li><a href="formulario.html">POR SI QUIERES DECIR ALGO</a></li>
     </ul>
   </aside>
@@ -103,7 +127,7 @@
 
   <div class="grid" id="poemas"></div>
 
-  <p>AGREGARÉ MÁS CADA QUE ME ACUERDE DE TI</p>
+  <h2>AGREGARÉ MÁS CADA QUE ME ACUERDE DE TI</h2>
 </main>
 
 <script>
