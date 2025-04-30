@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>POR SI QUIERES DECIR ALGO</title>
+  <title>Deja tu comentario</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -54,20 +54,34 @@
       background-color: #a60052;
     }
     aside {
-      width: 200px;
-      padding-right: 20px;
+      width: 100%;
+      background-color: #ffe6f0;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
     }
+
     aside ul {
       list-style: none;
       padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
     }
+
     aside li {
-      margin: 10px 0;
+      margin: 0;
     }
+
     aside a {
       text-decoration: none;
       color: #cc0066;
       font-weight: bold;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -79,9 +93,10 @@
       <li><a href="poemas.html">POEMAS</a></li>
       <li><a href="musica.html">MUSICA</a></li>
       <li><a href="fotos.html">FOTOS</a></li>
+      <li><a href="cien_pensamientos.html">CIEN RAZONES</a></li>
     </ul>
   </aside>
-  <h1>Te Amo</h1>
+  <h1>Por si me quieres escribir</h1>
 
   <form action="https://formsubmit.co/erickyvan2004@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
