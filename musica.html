@@ -10,6 +10,7 @@
       padding: 30px;
       background: linear-gradient(to right, #ffe6e6, #fff0f5);
       color: #4b2e2e;
+      margin: 0;
     }
 
     h1 {
@@ -17,10 +18,44 @@
       font-family: 'Great Vibes', cursive;
       color: #b30059;
       font-size: 48px;
+      margin-top: 60px;
       margin-bottom: 40px;
     }
+
     h2{
-        text-align: center;
+      text-align: center;
+  color: #b30059;
+    }
+
+    aside {
+      width: 100%;
+      background-color: #ffe6f0;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    aside li {
+      margin: 0;
+    }
+
+    aside a {
+      text-decoration: none;
+      color: #cc0066;
+      font-weight: bold;
+      font-size: 16px;
     }
 
     .container {
@@ -28,6 +63,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
+      margin-top: 30px;
     }
 
     .box {
@@ -82,36 +118,22 @@
         transform: translateY(-100px) scale(1.5);
       }
     }
-    aside {
-      width: 200px;
-      padding-right: 20px;
-    }
-    aside ul {
-      list-style: none;
-      padding: 0;
-    }
-    aside li {
-      margin: 10px 0;
-    }
-    aside a {
-      text-decoration: none;
-      color: #cc0066;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
-  <h1>Cada cancion que me hace pensar en ti</h1>
-  <h2>(toca para reproducir)</h2>
   <aside>
     <ul>
   
       <li><a href="index.html">INICIO</a></li>
-      <li><a href="poemas.html">MUSICA</a></li>
+      <li><a href="poemas.html">POEMAS</a></li>
       <li><a href="fotos.html">FOTOS</a></li>
+      <li><a href="cien_pensamientos.html">CIEN RAZONES</a></li>
       <li><a href="formulario.html">COMENTARIOS</a></li>
     </ul>
   </aside>
+  <h1>Cada cancion que me hace pensar en ti</h1>
+  <h2>(toca para reproducir)</h2>
+
   <div class="container">
     <div class="box">
       <p>Por Siempre</p>
@@ -184,7 +206,37 @@
           Tu navegador no soporta el audio.
         </audio>
       </div>
+
+  <div class="box">
+    <p>Eres</p>
+    <img src="imagenes/eres.jpg" alt="Foto 2" onclick="togglePlay(this)">
+    <audio>
+      <source src="musica/Eres.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
   </div>
+
+<div class="box">
+  <p>Quiero ser tu cancion de principio a fin.</p>
+  <img src="imagenes/cama y mesa.jpg" alt="Foto 2" onclick="togglePlay(this)">
+  <audio>
+    <source src="musica/cama y mesa.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+</div>
+
+<div class="box">
+  <p>Los voy a cuidar, con todo mi amor.</p>
+  <img src="imagenes/labios rotos.jpg" alt="Foto 2" onclick="togglePlay(this)">
+  <audio>
+    <source src="musica/Labios Rotos.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+</div>
+
+</div>
+
+
 
   <script>
     const audios = document.querySelectorAll('audio');
