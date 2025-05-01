@@ -54,35 +54,66 @@
       background-color: #a60052;
     }
     aside {
-      width: 100%;
-      background-color: #ffe6f0;
-      padding: 10px 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 100;
-    }
+  width: 100%;
+  background: linear-gradient(to right, #fff0f5, #ffe6f0);
+  padding: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #e6a6b6;
+  backdrop-filter: blur(6px);
+  font-family: 'Georgia', serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
-    aside ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-    }
+aside ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
 
-    aside li {
-      margin: 0;
-    }
+aside li {
+  position: relative;
+}
 
-    aside a {
-      text-decoration: none;
-      color: #cc0066;
-      font-weight: bold;
-      font-size: 16px;
-    }
+aside a {
+  color: #99004d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+aside a:hover {
+  background-color: rgba(204, 0, 102, 0.1);
+  color: #660033;
+  box-shadow: 0 2px 10px rgba(204, 0, 102, 0.2);
+}
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: linear-gradient(to right, #ffe6f0, #fff0f5);
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  color: #b30059;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+  z-index: 50;
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 1px;
+}
   </style>
 </head>
 <body>
@@ -96,6 +127,7 @@
       <li><a href="cien_pensamientos.html">CIEN RAZONES</a></li>
     </ul>
   </aside>
+<br><br>
   <h1>Por si me quieres escribir</h1>
 
   <form action="https://formsubmit.co/erickyvan2004@gmail.com" method="POST">
@@ -112,6 +144,10 @@
 
     <button type="submit">Enviar</button>
   </form>
+  <footer>
+    <p>Con amor para ti</p>
+  </footer>
+  
 
 </body>
 </html>
