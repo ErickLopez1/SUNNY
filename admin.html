@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Admin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .contador {
+      font-size: 2em;
+      color: #28a745;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <h1>Panel de Administrador</h1>
+    <p>Total de visitas de usuarios: <span class="contador" id="contador">0</span></p>
+  
+    <h2>Historial de Ingresos</h2>
+    <ul id="historialLista"></ul>
+  
+    <button onclick="localStorage.clear(); location.reload();">Reiniciar contador e historial</button>
+  
+    <script>
+      // Mostrar visitas totales
+      const visitas = localStorage.getItem("visitas") || 0;
+      document.getElementById("contador").textContent = visitas;
+  
+      // Mostrar historial
+      const historial = JSON.parse(localStorage.getItem("historial") || "{}");
+      const lista = document.getElementById("historialLista");
+  
+      if (Object.keys(historial).length === 0) {
+        lista.innerHTML = "<li>No hay registros aún.</li>";
+      } else {
+        for (const usuario in historial) {
+          const li = document.createElement("li");
+          li.textContent = `${usuario}: ${historial[usuario]} acceso(s)`;
+          lista.appendChild(li);
+        }
+      }
+    </script>
+  </body>
+  
+</html>

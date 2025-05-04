@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+      <p class="error" id="errorMsg">Usuario o contraseña incorrectos</p>
+    </form>
+  </div>
+
+  <script>
+    const usuarios = {
+      "yuss": "01100101",
+      "ivan": "01100101",
+      "admin": "admin123"
+    };
+  
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      const usuario = document.getElementById("usuario").value;
+      const password = document.getElementById("password").value;
+  
+      if (usuarios[usuario] && usuarios[usuario] === password) {
+        if (usuario !== "admin") {
+          // Contador total
+          let visitas = parseInt(localStorage.getItem("visitas") || 0);
+          localStorage.setItem("visitas", visitas + 1);
+  
+          // Historial por usuario
+          const historial = JSON.parse(localStorage.getItem("historial") || "{}");
+          historial[usuario] = (historial[usuario] || 0) + 1;
+          localStorage.setItem("historial", JSON.stringify(historial));
+        }
+  
+        // Redirigir
+        if (usuario === "admin") {
+          window.location.href = "admin.html";
+        } else {
+          window.location.href = "inicio.html";
+        }
+      } else {
+        document.getElementById("errorMsg").style.display = "block";
+      }
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
+
